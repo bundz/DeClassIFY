@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Reading time",
+  "name": "DeClassIFY",
   "version": "1.0",
-  "description": "Add the reading time to Chrome Extension documentation articles",
+  "description": "GERSON ESCREVA A DESCRIÇÃO AQUI",
 
   "icons": {
     "16": "images/icon-16.png",
