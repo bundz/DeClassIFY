@@ -21,38 +21,7 @@ class DeClassIFY {
     }
 
     const results = this.generateResults(classifications);
-    return results;
-  }
-
-  async getPageText(page) {
-    const pageTextContent = await page.getTextContent();
-    const text = this.extractNormalizedText(pageTextContent);
-    return text;
-  }
-
-  extractNormalizedText(pageTextContent) {
-    const text = this.extractText(pageTextContent);
-    return this.normalizeText(text);
-  }
-
-  extractText(pageTextContent) {
-    let text = "";
-
-    for (const item of pageTextContent.items) {
-      text += item.str;
-    }
-
-    return text;
-  }
-
-  normalizeText(text) {
-    text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    text = text.toLowerCase();
-
-    text = text.replace(/[^a-z\n\t]+/g, " ");
-    text = text.replace(/[" "]+/g, " ");
-
-    return text;
+    return { results, classifications };
   }
 
   countAllOccurrences(text) {
@@ -99,5 +68,36 @@ class DeClassIFY {
     }
 
     return results;
+  }
+
+  async getPageText(page) {
+    const pageTextContent = await page.getTextContent();
+    const text = this.extractNormalizedText(pageTextContent);
+    return text;
+  }
+
+  extractNormalizedText(pageTextContent) {
+    const text = this.extractText(pageTextContent);
+    return this.normalizeText(text);
+  }
+
+  extractText(pageTextContent) {
+    let text = "";
+
+    for (const item of pageTextContent.items) {
+      text += item.str;
+    }
+
+    return text;
+  }
+
+  normalizeText(text) {
+    text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    text = text.toLowerCase();
+
+    text = text.replace(/[^a-z\n\t]+/g, " ");
+    text = text.replace(/[" "]+/g, " ");
+
+    return text;
   }
 }

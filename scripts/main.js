@@ -7,8 +7,8 @@ const run = async () => {
 
   const declassifyUi = new DeClassIFYUI();
   const declassify = new DeClassIFY();
-  const results = await declassify.classify(url);
-  declassifyUi.addResult("Nature", results.nature);
+  const { results, classifications } = await declassify.classify(url);
+  declassifyUi.addResult("Nature", `${results.nature} (${classifications.nature.pure}/${classifications.nature.applied})`);
 };
 
 run();
