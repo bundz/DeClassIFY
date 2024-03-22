@@ -7,6 +7,9 @@ class DeClassIFYUI {
     <h2>Classification</h2>
     <div id="pdf-classify-results">
     </div>
+    <div id="pdf-classify-loader">
+      <span></span>
+    </div>
   </div>
   <div id="pdf-classify">
     <p>Classify</p>
@@ -14,12 +17,33 @@ class DeClassIFYUI {
   `;
 
   constructor() {
+    this.url = this.getUrl();
+
+    if (!this.url) {
+      return;
+    }
+
     $("body").append(this.view);
     this.button = $("#pdf-classify");
     this.modal = $("#pdf-classify-modal");
     this.closeModalButton = $("#pdf-classify-modal-close-button");
     this.results = $("#pdf-classify-results");
+    this.loader = $("#pdf-classify-loader");
     this.setupEvents();
+  }
+
+  getUrl() {
+    const url = window.location.href;
+
+    if (url.endsWith(".pdf")) {
+      return url;
+    }
+
+    const plugin = $('embed[type="application/pdf"]');
+
+    if (plugin.attr("type") == "application/pdf") {
+      return url;
+    }
   }
 
   setupEvents() {

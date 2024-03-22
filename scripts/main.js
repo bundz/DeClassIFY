@@ -1,14 +1,9 @@
-const run = async () => {
-  const url = window.location.href;
+const declassifyUi = new DeClassIFYUI();
+const declassify = new DeClassIFY();
 
-  if (!url.endsWith(".pdf")) {
-    return;
-  }
-
-  const declassifyUi = new DeClassIFYUI();
-  const declassify = new DeClassIFY();
-  const { results, classifications } = await declassify.classify(url);
+declassifyUi.button.click(async () => {
+  declassifyUi.loader.show();
+  const { results, classifications } = await declassify.classify(declassifyUi.url);
+  declassifyUi.loader.hide();
   declassifyUi.addResult("Nature", `${results.nature} (${classifications.nature.pure}/${classifications.nature.applied})`);
-};
-
-run();
+});
