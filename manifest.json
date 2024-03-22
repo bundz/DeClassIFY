@@ -10,12 +10,15 @@
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },
+  "permissions": [
+   
+  ],
   "host_permissions": [
-    "https://w3.org/*"
+    "file://*/*"
   ],
   "content_scripts": [
     {
-      "js": ["libs/jquery.min.js","libs/pdf.min.js", "libs/pdf-worker.min.js","data/nature.js", "scripts/main.js"],
+      "js": ["libs/jquery.min.js","libs/pdf.min.js", "libs/pdf-worker.min.js","data/nature.js", "scripts/declassify.js", "scripts/declassify-ui.js", "scripts/main.js"],
       "matches": [
         "<all_urls>"
       ],
