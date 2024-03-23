@@ -29,3 +29,6 @@ Follow these steps:
 ## Usage
 When you open a PDF file on a new tab, a floating button should appear on the bottom right.
 If you click on the button a popup will appear with the PDF classifications.
+
+## License
+GPL-3.0 license
