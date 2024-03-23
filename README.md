@@ -1,4 +1,6 @@
-![Alt text](images/icon-128.png)
+<p align="center">
+  <img src="images/icon-128.png" />
+</p>
 # DeClassIFY
 DeClassIFY is a google chrome plugin that classifies PDF files by:
 
