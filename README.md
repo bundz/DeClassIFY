@@ -11,7 +11,7 @@ DeClassIFY is a google chrome plugin that classifies PDF files by:
 It runs when you open a PDF in a new tab.
 
 <p align="center">
-  <img src="https://drive.google.com/file/d/1aeF_e6Ifj_HDkaEHnHKZrpPG2g_gRRo6/view?usp=sharing" />
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExamdyMDE4dTc4MW03NGhtNGdzbjlueWFoMzM0bmw0dWlwOG16anZxcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H9OkS7wVxg5DpjLwWY/giphy.gif" />
 </p>
 
 ## Installation
