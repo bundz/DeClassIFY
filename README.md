@@ -5,11 +5,14 @@
 <h1 align="center">DeClassIFY</h1>
 
 DeClassIFY is a google chrome plugin that classifies PDF files by:
-
 - Nature (Pure or Applied_
 - ...
 
 It runs when you open a PDF in a new tab.
+
+<p align="center">
+  <img src="https://drive.google.com/file/d/1aeF_e6Ifj_HDkaEHnHKZrpPG2g_gRRo6/view?usp=sharing" />
+</p>
 
 ## Installation
 Follow these steps:
