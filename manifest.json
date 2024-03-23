@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "DeClassIFY",
   "version": "1.0",
-  "description": "GERSON ESCREVA A DESCRIÇÃO AQUI",
+  "description": "DeClassIFY is a plugin that classifies PDF files",
 
   "icons": {
     "16": "images/icon-16.png",
@@ -10,12 +10,8 @@
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },
-  "permissions": [
-   
-  ],
-  "host_permissions": [
-    "file://*/*"
-  ],
+  "permissions": [],
+  "host_permissions": [],
   "content_scripts": [
     {
       "js": ["libs/jquery.min.js","libs/pdf.min.js", "libs/pdf-worker.min.js","data/nature.js", "scripts/declassify.js", "scripts/declassify-ui.js", "scripts/main.js"],
