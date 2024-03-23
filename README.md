@@ -1,7 +1,9 @@
 <p align="center">
   <img src="images/icon-128.png" />
 </p>
-# DeClassIFY
+
+<h1 align="center">DeClassIFY</h1>
+
 DeClassIFY is a google chrome plugin that classifies PDF files by:
 
 - Nature (Pure or Applied_
