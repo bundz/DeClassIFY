@@ -14,7 +14,7 @@
   "host_permissions": [],
   "content_scripts": [
     {
-      "js": ["libs/jquery.min.js","libs/pdf.min.js", "libs/pdf-worker.min.js","data/nature.js", "scripts/declassify.js", "scripts/declassify-ui.js", "scripts/main.js"],
+      "js": ["libs/jquery.min.js","libs/pdf.min.js", "libs/pdf-worker.min.js", "data/nature.js", "data/method.js", "data/validation_strategy.js", "scripts/declassify.js", "scripts/declassify-ui.js", "scripts/main.js"],
       "matches": [
         "<all_urls>"
       ],

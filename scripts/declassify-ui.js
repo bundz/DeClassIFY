@@ -12,7 +12,7 @@ class DeClassIFYUI {
     </div>
   </div>
   <div id="pdf-classify">
-    <p>Classify</p>
+    <p>DeClassIFY</p>
   </div>
   `;
 
