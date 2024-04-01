@@ -1,5 +1,5 @@
 const validationstrategyRules = {
-  methodPilot: [
+  methodPilotRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -9,7 +9,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodComparative: [
+  methodComparativeRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -19,7 +19,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodProtocol_analysis: [
+  methodProtocol_analysisRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -29,7 +29,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodObservational: [
+  methodObservationalRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -39,7 +39,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodProject_monitoring: [
+  methodProject_monitoringRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -49,7 +49,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodMeta_analysis: [
+  methodMeta_analysisRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -59,7 +59,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodLiterature_review: [
+  methodLiterature_reviewRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -69,7 +69,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodHermeneutics: [
+  methodHermeneuticsRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -79,7 +79,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodPhenomenology: [
+  methodPhenomenologyRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -89,7 +89,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodExperiment: [
+  methodExperimentRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -99,7 +99,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodApplication_and_instrument: [
+  methodApplication_and_instrumentRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -109,7 +109,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodCommunity: [
+  methodCommunityRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -119,7 +119,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodCase_control: [
+  methodCase_controlRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -129,7 +129,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodDiscourse_analysis: [
+  methodDiscourse_analysisRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -139,7 +139,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodConceptual_analysis: [
+  methodConceptual_analysisRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -149,7 +149,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodStatic_analysis: [
+  methodStatic_analysisRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -159,7 +159,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodDynamic_analysis: [
+  methodDynamic_analysisRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -169,7 +169,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodMathematical_proof: [
+  methodMathematical_proofRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -179,7 +179,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodGrounded_theory: [
+  methodGrounded_theoryRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -189,7 +189,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodReplication: [
+  methodReplicationRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -199,7 +199,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodCase_study: [
+  methodCase_studyRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -209,7 +209,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodAction_research: [
+  methodAction_researchRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
@@ -219,7 +219,7 @@ const validationstrategyRules = {
     "authors applied",
     "applied data",
   ],
-  methodSecondary_data: [
+  methodSecondary_dataRules: [
     "applied",
     "can be applied to the field",
     "being applied to",
