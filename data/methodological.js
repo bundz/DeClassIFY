@@ -1,4 +1,4 @@
-const methodologicalRules {
+const methodologicalRules = {
 methodologicalControl_modelRules: [
           "optimal control model" ,
           "control model complexity" ,

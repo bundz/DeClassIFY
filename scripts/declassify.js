@@ -7,6 +7,37 @@ const { methodAnalyticalRules, methodCausalRules, methodCause_and_effectRules,
 	methodInvestigativeRules, methodMathemathicalRules, methodNormativeRules,
 	methodProblem_orientedRules, methodProblem_solvingRules, methodScientificRules,
 	methodTheoreticalRules } = methodRules;
+const { methodologicalControl_modelRules, methodologicalHistoricalRules, methodologicalHistoricRules, 
+        methodologicalModelingRules, methodologicalObservationalRules, 
+        methodologicalProcess_analysisRules, methodologicalProcessualRules, 
+        methodologicalPrototypeRules, methodologicalSimulationRules } = methodologicalRules;
+/*
+const { validation_resultCost_effectivenessRules, validation_resultEffectivenessRules, 
+        validation_resultEfficiencyRules, validation_resultOperationalizationRules, 
+        validation_resultUsabilityRules
+} = validation_resultRules;
+const { methodPilotRules, methodComparativeRules, methodProtocol_analysisRules,
+        methodObservationalRules, methodProject_monitoringRules, methodMeta_analysisRules,
+        methodLiterature_reviewRules, methodHermeneuticsRules, methodPhenomenologyRules,
+        methodExperimentRules, methodApplication_and_instrumentRules,
+        methodCommunityRules, methodCase_controlRules, methodDiscourse_analysisRules,
+        methodConceptual_analysisRules, methodStatic_analysisRules, methodDynamic_analysisRules,
+        methodMathematical_proofRules, methodGrounded_theoryRules, methodReplicationRules,
+        methodCase_studyRules, methodAction_researchRules, methodSecondary_dataRules
+} = validationstrategyRules;
+const { purposeBehavioralRules, purposeCritiqueRules, purposeDesign_scienceRules,
+        purposeInterpretiveRules
+} = purposeRules;
+const { secondary_proofProofRules, secondary_proofRebuttalRules
+} = secondary_proofRules;
+const { environmentIn_vitroRules, environmentIn_vivoRules, environmentRealRules,
+        environmentReal_worldRules, environmentSimulatedRules
+} = environmentRules;
+const { data_natureCross_sectionalRules, data_natureCross_sectionRules,
+        data_natureLongitudinalRules, data_natureQualitativeRules,
+        data_natureQuantitativeRules
+} = data_natureRules;
+*/
 
   function getMaxLoc(obj) {
     let maxKey = null;
@@ -40,28 +71,28 @@ class DeClassIFY {
         applied: 0,
       },
       method: {    // Categoria 2
-        analyticalRules: 0,
-        causalRules: 0,
-        cause_and_effectRules: 0,
-        conceptRules: 0,
-        conceptualRules: 0,
-        constructiveRules: 0,
-        descriptiveRules: 0,
-        empiricRules: 0,
-        engineeringRules: 0,
-        evaluationRules: 0,
-        evaluativeRules: 0,
-        experimentalRules: 0,
-        exploratoryRules: 0,
-        formalRules: 0,
-        investigateRules: 0,
-        investigativeRules: 0,
-        mathemathicalRules: 0,
-        normativeRules: 0,
-        problem_orientedRules: 0,
-        problem_solvingRules: 0,
-        scientificRules: 0,
-        theoreticalRules: 0,
+        analytical: 0,
+        causal: 0,
+        cause_and_effect: 0,
+        concept: 0,
+        conceptual: 0,
+        constructive: 0,
+        descriptive: 0,
+        empiric: 0,
+        engineering: 0,
+        evaluation: 0,
+        evaluative: 0,
+        experimental: 0,
+        exploratory: 0,
+        formal: 0,
+        investigate: 0,
+        investigative: 0,
+        mathemathical: 0,
+        normative: 0,
+        problem_oriented: 0,
+        problem_solving: 0,
+        scientific: 0,
+        theoretical: 0,
       },
       validation_strategy: {  // Categoria 3
         pilot: 0,
@@ -121,7 +152,7 @@ class DeClassIFY {
 	behavior: 0,
 	critique: 0,
 	design_science: 0,
-	interpretative,
+	interpretative: 0,
       },
       secondary_proof: { // Categoria 9
 	proof: 0,
@@ -139,27 +170,34 @@ class DeClassIFY {
     for (let i = 1; i <= pdf.numPages; i++) {
       const page = await pdf.getPage(i);
       const text = await this.getPageText(page);
-      const occurrences = this.countNatureOccurrences(text);
-      // Nature Categoria 1
-      classifications.nature.pure += occurrences.nature.pure;
-      classifications.nature.applied += occurrences.nature.applied;
-      // Method Categoria 2
-      classifications.method.causal += classifications.method.causal;
-      classifications.method.conceptual += classifications.method.conceptual;
-      classifications.method.formulative += classifications.method.formulative;
-      classifications.method.formal += classifications.method.formal;
-      classifications.method.theoretical += classifications.method.theoretical;
-      classifications.method.constructive += classifications.method.constructive;
-      classifications.method.normative += classifications.method.normative;
-      classifications.method.problem_oriented += classifications.method.problem_oriented;
-      classifications.method.experimental += classifications.method.experimental;
-      classifications.method.exploratory += classifications.method.exploratory;
-      classifications.method.analytical += classifications.method.analytical;
-      classifications.method.evaluative += classifications.method.evaluative;
-      classifications.method.descriptive += classifications.method.descriptive;
-      classifications.method.mathematical += classifications.method.mathematical;
-      classifications.method.scientific += classifications.method.scientific;
-      classifications.method.engineering += classifications.method.engineering;
+      {
+        // Nature Categoria 1
+        const occurrences = this.countNatureOccurrences(text);
+
+        classifications.nature.pure    += occurrences.nature.pure;
+        classifications.nature.applied += occurrences.nature.applied;
+      }
+      {
+        // Method Categoria 2
+        const occurrences = this.countMethodOccurrences(text);
+       
+        classifications.method.causal           += occurrences.method.causal;
+        classifications.method.conceptual       += occurrences.method.conceptual;
+        classifications.method.formulative      += occurrences.method.formulative;
+        classifications.method.formal           += occurrences.method.formal;
+        classifications.method.theoretical      += occurrences.method.theoretical;
+        classifications.method.constructive     += occurrences.method.constructive;
+        classifications.method.normative        += occurrences.method.normative;
+        classifications.method.problem_oriented += occurrences.method.problem_oriented;
+        classifications.method.experimental     += occurrences.method.experimental;
+        classifications.method.exploratory      += occurrences.method.exploratory;
+        classifications.method.analytical       += occurrences.method.analytical;
+        classifications.method.evaluative       += occurrences.method.evaluative;
+        classifications.method.descriptive      += occurrences.method.descriptive;
+        classifications.method.mathematical     += occurrences.method.mathematical;
+        classifications.method.scientific       += occurrences.method.scientific;
+        classifications.method.engineering      += occurrences.method.engineering;
+      }
       // Validation Results Categoria 3
       classifications.method.pilot += classifications.validation_strategy.pilot;
       classifications.method.comparative += classifications.validation_strategy.comparative;
@@ -225,22 +263,23 @@ class DeClassIFY {
       },
     };
 
-    occurrences.method.causal = this.countOccurrences(text, methodCausalRulesi);
-    occurrences.method.conceptual = this.countOccurrences(text, methodConceptualRules);
-    occurrences.method.formulative = this.countOccurrences(text, methodFormulativeRules);
-    occurrences.method.formal = this.countOccurrences(text, methodFormalRules);
-    occurrences.method.theoretical = this.countOccurrences(text, methodTheoreticalRules);
-    occurrences.method.constructive = this.countOccurrences(text, methodConstructiveRules);
-    occurrences.method.normative = this.countOccurrences(text, methodNormativeRules);
+    return occurrences;
+    occurrences.method.causal           = this.countOccurrences(text, methodCausalRules);
+    occurrences.method.conceptual       = this.countOccurrences(text, methodConceptualRules);
+    occurrences.method.formulative      = this.countOccurrences(text, methodFormulativeRules);
+    occurrences.method.formal           = this.countOccurrences(text, methodFormalRules);
+    occurrences.method.theoretical      = this.countOccurrences(text, methodTheoreticalRules);
+    occurrences.method.constructive     = this.countOccurrences(text, methodConstructiveRules);
+    occurrences.method.normative        = this.countOccurrences(text, methodNormativeRules);
     occurrences.method.problem_oriented = this.countOccurrences(text, methodProblem_orientedRules);
-    occurrences.method.experimental = this.countOccurrences(text, methodExperimentalRules);
-    occurrences.method.exploratory = this.countOccurrences(text, methodExploratoryRules);
-    occurrences.method.analytical = this.countOccurrences(text, methodAnalyticalRules);
-    occurrences.method.evaluative = this.countOccurrences(text, methodEvaluativeRules);
-    occurrences.method.descriptive = this.countOccurrences(text, methodEvaluativeRules);
-    occurrences.method.mathematical = this.countOccurrences(text, methodMathematicalRules);
-    occurrences.method.scientific = this.countOccurrences(text, methodScientificRules);
-    occurrences.method.engineering = this.countOccurrences(text, methodEngineeringRules);
+    occurrences.method.experimental     = this.countOccurrences(text, methodExperimentalRules);
+    occurrences.method.exploratory      = this.countOccurrences(text, methodExploratoryRules);
+    occurrences.method.analytical       = this.countOccurrences(text, methodAnalyticalRules);
+    occurrences.method.evaluative       = this.countOccurrences(text, methodEvaluativeRules);
+    occurrences.method.descriptive      = this.countOccurrences(text, methodEvaluativeRules);
+    occurrences.method.mathematical     = this.countOccurrences(text, methodMathematicalRules);
+    occurrences.method.scientific       = this.countOccurrences(text, methodScientificRules);
+    occurrences.method.engineering      = this.countOccurrences(text, methodEngineeringRules);
     return occurrences;
   }
 
@@ -248,7 +287,7 @@ class DeClassIFY {
     let totalCount = 0;
 
     for (const substring of array) {
-      const regex = new RegExp(Substring, "gi");
+      const regex = new RegExp(substring, "gi");
       const matches = text.match(regex);
 
       if (matches) {
