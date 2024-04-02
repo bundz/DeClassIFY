@@ -29,14 +29,12 @@ const { data_natureCross_sectionalRules, data_natureCross_sectionRules,
 const { environmentIn_vitroRules, environmentIn_vivoRules, environmentRealRules,
         environmentReal_worldRules, environmentSimulatedRules } = environmentRules;
 const { proofAbductionRules, proofDeductionRules, proofInductionRules } = proofRules;
-/*
+const { purposeBehavioralRules, purposeCritiqueRules, purposeDesign_scienceRules,
+        purposeInterpretiveRules } = purposeRules;
 const { validation_resultCost_effectivenessRules, validation_resultEffectivenessRules, 
         validation_resultEfficiencyRules, validation_resultOperationalizationRules, 
         validation_resultUsabilityRules } = validation_resultRules;
-const { purposeBehavioralRules, purposeCritiqueRules, purposeDesign_scienceRules,
-        purposeInterpretiveRules } = purposeRules;
 const { secondary_proofProofRules, secondary_proofRebuttalRules } = secondary_proofRules;
-*/
 
   function getMaxLoc(obj) {
     let maxKey = null;
@@ -437,7 +435,10 @@ countPurposeOccurrences(text) { // Categoria 8
         interpretative: 0,
       },
     };
-    // TODO
+    occurrences.purpose.behavior       = this.countOccurrences(text, purposeBehaviorRules);
+    occurrences.purpose.critique       = this.countOccurrences(text, purposeCritiqueRules);
+    occurrences.purpose.design_science = this.countOccurrences(text, purposeDesign_scienceRules);
+    occurrences.purpose.interpretative = this.countOccurrences(text, purposeInterpretativeRules);
     return occurrences;
   }
 
@@ -448,7 +449,8 @@ countSecondary_proofOccurrences(text) { // Categoria 9
         rebuttal: 0,
       },
     };
-    // TODO
+    occurrences.secondary_proof.proof    = this.countOccurrences(text, secondary_proofProofRules);
+    occurrences.secondary_proof.rebuttal = this.countOccurrences(text, secondary_proofRebuttalRules);
     return occurrences;
   }
 
@@ -462,8 +464,11 @@ countValidation_resultOccurrences(text) { // Categoria 10
         usability: 0,
       },
     };
-
-    // TODO
+    occurrences.validation_result.cost_effectiveness = this.countOccurrences(text, validation_resultCost_effectivenessRules);
+    occurrences.validation_result.effectiveness      = this.countOccurrences(text, validation_resultEffectivenessRules);
+    occurrences.validation_result.efficiency         = this.countOccurrences(text, validation_resultEfficiencyRules);
+    occurrences.validation_result.operationalization = this.countOccurrences(text, validation_resultOperationalizationRules);
+    occurrences.validation_result.usability          = this.countOccurrences(text, validation_resultUsabilityRules);
     return occurrences;
   }
 
@@ -497,15 +502,15 @@ countValidation_resultOccurrences(text) { // Categoria 10
       results.nature = "None";
     }
 
-    results.method = getMaxLoc(classifications.method);
+    results.method              = getMaxLoc(classifications.method);
     results.validation_strategy = getMaxLoc(classifications.validation_strategy);
-    results.data_nature = getMaxLoc(classifications.data_nature);
-    results.environment = getMaxLoc(classifications.environment);
-    results.methodological = getMaxLoc(classifications.methodological);
-    results.proof = getMaxLoc(classifications.proof);
-    results.purpose = getMaxLoc(classifications.purpose);
-    results.secundary_proof = getMaxLoc(classifications.secundary_proof);
-    results.validation_result = getMaxLoc(classifications.validation_result);
+    results.data_nature         = getMaxLoc(classifications.data_nature);
+    results.environment         = getMaxLoc(classifications.environment);
+    results.methodological      = getMaxLoc(classifications.methodological);
+    results.proof               = getMaxLoc(classifications.proof);
+    results.purpose             = getMaxLoc(classifications.purpose);
+    results.secondary_proof     = getMaxLoc(classifications.secundary_proof);
+    results.validation_result   = getMaxLoc(classifications.validation_result);
 	  
     return results;
   }

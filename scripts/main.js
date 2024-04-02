@@ -14,6 +14,6 @@ declassifyUi.button.click(async () => {
   declassifyUi.addResult("Methodological", `${results.methodological}`);
   declassifyUi.addResult("Proof", `${results.proof}`);
   declassifyUi.addResult("Purpose", `${results.purpose}`);
-  declassifyUi.addResult("Secundary Proof", `${results.secondary_proof}`);
+  declassifyUi.addResult("Secondary Proof", `${results.secondary_proof}`);
   declassifyUi.addResult("Validation Result", `${results.validation_result}`);
 });
