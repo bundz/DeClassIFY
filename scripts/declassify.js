@@ -28,16 +28,14 @@ const { data_natureCross_sectionalRules, data_natureCross_sectionRules,
         data_natureQuantitativeRules } = data_natureRules;
 const { environmentIn_vitroRules, environmentIn_vivoRules, environmentRealRules,
         environmentReal_worldRules, environmentSimulatedRules } = environmentRules;
+const { proofAbductionRules, proofDeductionRules, proofInductionRules } = proofRules;
 /*
 const { validation_resultCost_effectivenessRules, validation_resultEffectivenessRules, 
         validation_resultEfficiencyRules, validation_resultOperationalizationRules, 
-        validation_resultUsabilityRules
-} = validation_resultRules;
+        validation_resultUsabilityRules } = validation_resultRules;
 const { purposeBehavioralRules, purposeCritiqueRules, purposeDesign_scienceRules,
-        purposeInterpretiveRules
-} = purposeRules;
-const { secondary_proofProofRules, secondary_proofRebuttalRules
-} = secondary_proofRules;
+        purposeInterpretiveRules } = purposeRules;
+const { secondary_proofProofRules, secondary_proofRebuttalRules } = secondary_proofRules;
 */
 
   function getMaxLoc(obj) {
@@ -404,7 +402,15 @@ class DeClassIFY {
 	simulation: 0,
       },
     };
-    // TODO
+    occurrences.metodological.control_model    = this.countOccurrences(text, metodologicalControl_modelRules);
+    occurrences.metodological.historical       = this.countOccurrences(text, metodologicalHistoricalRules);
+    occurrences.metodological.historic         = this.countOccurrences(text, metodologicalHistoricRules);
+    occurrences.metodological.modeling         = this.countOccurrences(text, metodologicalModelingRules);
+    occurrences.metodological.observational    = this.countOccurrences(text, metodologicalObservationalRules);
+    occurrences.metodological.process_analysis = this.countOccurrences(text, metodologicalProcess_analysisRules);
+    occurrences.metodological.processual       = this.countOccurrences(text, metodologicalProcessualRules);
+    occurrences.metodological.prototype        = this.countOccurrences(text, metodologicalPrototypeRules);
+    occurrences.metodological.simulation       = this.countOccurrences(text, metodologicalSimulationRules);
     return occurrences;
   }
 
@@ -416,7 +422,9 @@ class DeClassIFY {
         induction: 0,
       },
     };
-    // TODO
+    occurrences.proof.abduction = this.countOccurrences(text, proofAbductionRules);
+    occurrences.proof.deduction = this.countOccurrences(text, proofDeductionRules);
+    occurrences.proof.induction = this.countOccurrences(text, proofInductionRules);
     return occurrences;
   }
 
