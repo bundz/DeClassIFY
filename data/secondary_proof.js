@@ -140,7 +140,7 @@ secondary_proofProofRules: [
           "several proof goals" ,
           "pointwise proof" ,
           "reasoning proof tree" ,
-          "proof (theorem" ,
+          "proof" ,
           "incremental proof" ,
           "proof considers" ,
           "proof fails" ,

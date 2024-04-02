@@ -198,7 +198,7 @@ environmentRealRules: [
           "correct real result" ,
           "achieves real speedup" ,
           "realize real speedup-up" ,
-          "(for real runs" ,
+          "real runs" ,
           "real workload" ,
           "necessarily real races" ,
           "four real audio" ,
